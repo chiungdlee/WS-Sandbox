@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>iQuery Hover Test</title>
+    <link rel="stylesheet" type="text/css" href="hover.css">
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var src;
+            $('img').hover(function(){
+                src = $(this).attr('src');
+                $(this).attr('src', $(this).attr('data-alt-src'));
+            }, function(){
+                $(this).attr('src', src);
+            });
+        });
+    </script>
+</head>
+<body>
+<div>
+    <img src="https://www.google.com/logos/doodles/2016/25th-anniversary-of-armenias-independence-6257593681969152.2-hp2x.jpg" data-alt-src="https://www.google.com/logos/doodles/2016/us-voter-registration-day-reminder-5701453076234240-hp2x.gif" />
+</div>
+</body>
